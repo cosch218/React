@@ -1,3 +1,4 @@
+// 각각의 파일을 모두 공유하지 않고 export와 import를 이용해서 내보낸 값 중 가져올 값만 이용
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
