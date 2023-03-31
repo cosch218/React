@@ -7,6 +7,7 @@ import { LoginText } from './components/LoginComp';
 import TextComp from './components/TextComp';
 import OtherComp from './components/OtherComp';
 import StateComp from './components/StateComp';
+import EventComp from './components/EventComp';
 
 
 /* 리액트에서 오류가 뜨는 이유
@@ -32,6 +33,8 @@ function App() {
       {/* State를 가진 컴포넌트 */}
       <StateComp />
       <StateComp />
+      {/* 이벤트 */}
+      <EventComp />
     </div>
   );
 }

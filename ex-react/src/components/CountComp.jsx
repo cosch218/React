@@ -6,7 +6,7 @@ class CountComp extends Component {
     constructor(props) {
         // super를 통해 props 값 전달
         super(props);
-        // this를 통해 state 값 저장
+        // 사용할 값을 this를 통해 state로 값 저장
         this.state = {
             count : 0
         }
