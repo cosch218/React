@@ -3,6 +3,8 @@ import PropsComp from './components/PropsComp';
 import CountComp from './components/CountComp';
 import CountPropsComp from './components/CountPropsComp';
 import LoginComp from './components/LoginComp';
+import TestRefClass from './components/TestRefClass';
+import MemoComp from './components/MemoComp';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       => props의 num 값을 가져와서 버튼을 클릭할 때마다 num씩 증가 */}
       <CountPropsComp num={5} />
       <LoginComp />
+      <TestRefClass />
+      <MemoComp />
     </div>
   );
 }

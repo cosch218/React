@@ -8,6 +8,8 @@ import TextComp from './components/TextComp';
 import OtherComp from './components/OtherComp';
 import StateComp from './components/StateComp';
 import EventComp from './components/EventComp';
+import RefDomEvent from './components/RefDomEvent';
+import MapComp from './components/MapComp';
 
 
 /* 리액트에서 오류가 뜨는 이유
@@ -35,6 +37,8 @@ function App() {
       <StateComp />
       {/* 이벤트 */}
       <EventComp />
+      <RefDomEvent />
+      <MapComp />
     </div>
   );
 }
