@@ -11,6 +11,9 @@ import EventComp from "./components/EventComp";
 import RefDomEvent from "./components/RefDomEvent";
 import MapComp from "./components/MapComp";
 import LifeCycle from "./components/LifeCycle";
+import ArrowComponent from "./components/ArrowComponent";
+import ArrowTest from "./components/ArrowTest";
+import ArrowState from "./components/ArrowState";
 
 /* 리액트에서 오류가 뜨는 이유
  * 1. 존재하지 않는 컴포넌트 출력 => 가능하면 컴포넌트를 만든 이후에는 이름을 바꾸지 말 것
@@ -41,6 +44,17 @@ function App() {
       <RefDomEvent />
       <MapComp />
       <LifeCycle />
+      {/** 함수형 컴포넌트 */}
+      <ArrowComponent text="문자열 전달" />
+      <ArrowComponent text="문자열 전달">children 전달</ArrowComponent>
+      {/** 함수형 컴포넌트 실습
+       * 아래 컴포넌트를 함수형으로 만들고 출력하기
+       * name="green" : h3 태그로 출력
+       * check={true} : check 값이 true일 때 name 출력
+       * children="환영합니다" : p 태그로 출력
+       */}
+      <ArrowTest name="green">환영합니다</ArrowTest>
+      <ArrowState />
     </div>
   );
 }

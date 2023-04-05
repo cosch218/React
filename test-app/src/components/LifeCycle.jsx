@@ -18,7 +18,7 @@ export class LifeCycle extends Component {
   componentDidMount() {
     console.log("마운트가 되었습니다");
     // 처음 한 번 실행하는 내용 작성
-    // 또는 외부(공공데이터)에서 값을 한 번만 가져올 때
+    // 또는 외부(공공데이터)에서 값을 한 번만 가져올 때나 가장 처음 실행할 내용이 있을 때 활용 가능
     // setInterval( () => {this.tick}, 1000 );
     setInterval(this.tick, 1000);
   }
@@ -32,6 +32,8 @@ export class LifeCycle extends Component {
   }
 
   componentWillUnmount() {
+    // React.StrictMode를 사용할 때 마운트하고 언마운트 한 후 다시 마운트를 진행하고 작성된 내용을 실행
+    // 컴포넌트가 삭제/제거될 때 출력
     console.log("컴포넌트가 언마운트 되었습니다");
   }
 
@@ -64,6 +66,7 @@ export class LifeCycle extends Component {
         </button>
         <hr />
         <h3>시계 : {this.printClock(this.state.date)}</h3>
+        <hr />
       </div>
     );
   }

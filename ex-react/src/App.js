@@ -5,6 +5,9 @@ import CountPropsComp from './components/CountPropsComp';
 import LoginComp from './components/LoginComp';
 import TestRefClass from './components/TestRefClass';
 import MemoComp from './components/MemoComp';
+import ArrowStatePractice from './components/ArrowStatePractice';
+import ReactTestComp from './components/ReactTestComp';
+import ToDoListComp from './components/ToDoListComp';
 
 function App() {
   return (
@@ -20,6 +23,10 @@ function App() {
       <LoginComp />
       <TestRefClass />
       <MemoComp />
+      <hr />
+      <ArrowStatePractice />
+      <ReactTestComp num={20} />
+      <ToDoListComp />
     </div>
   );
 }

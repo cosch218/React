@@ -1,0 +1,13 @@
+.on {
+    color: lightslategray;
+}
+
+.todolist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    font-size: bold;
+}
