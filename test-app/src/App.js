@@ -14,6 +14,7 @@ import LifeCycle from "./components/LifeCycle";
 import ArrowComponent from "./components/ArrowComponent";
 import ArrowTest from "./components/ArrowTest";
 import ArrowState from "./components/ArrowState";
+import EffectHook from "./components/EffectHook";
 
 /* 리액트에서 오류가 뜨는 이유
  * 1. 존재하지 않는 컴포넌트 출력 => 가능하면 컴포넌트를 만든 이후에는 이름을 바꾸지 말 것
@@ -55,6 +56,8 @@ function App() {
        */}
       <ArrowTest name="green">환영합니다</ArrowTest>
       <ArrowState />
+      {/** 함수형 컴포넌트의 hook 사용 */}
+      <EffectHook />
     </div>
   );
 }
