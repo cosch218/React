@@ -36,8 +36,8 @@ export default function EffectHook() {
     /** 실습 */
     // 1. useEffect 이용하여 생성할 때 alert를 사용하여 "컴포넌트 생성" 경고창 띄우기
     useEffect( () => {
-        alert = "컴포넌트 생성";
-    } )
+        alert("컴포넌트 생성");
+    }, [])
 
     // 2. useEffect 이용하여 date 값이 바뀔 때 date의 초를 console.log를 통해 출력
     useEffect( () => {
