@@ -15,3 +15,4 @@ npm create react-app 을 통해 만든 프로젝트에서 router를 사용하기
 
 ### 1. index.js 통해서 <BrowserRouter> 확인
 ### 2. app.js 에서 router 사용 확인
+주소마다 연결된 컴포넌트를 확인하면서 내용 확인

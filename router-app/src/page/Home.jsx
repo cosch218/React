@@ -12,13 +12,18 @@ export default function Home() {
         <div>
             <h1>Home</h1>
             <p>현재 화면은 Home 입니다.</p>
-            <FormComp />
+            
             
             {/** a 태그 대신 컴포넌트의 주소로 이동 */}
             {/** to의 속성값으로 자바스크립트의 문자열 가능 */}
             <Link to={"/about"}>About</Link>
             <Link to={`/story/${fruit}`}>Story</Link>
+
+            <Link to={`/articles`}>Articles</Link>
+
             <hr />
+            {/** 쿼리스트링 값을 About에 전달하는 컴포넌트 */}
+            <FormComp />
 
             {/** map을 이용해서 배열의 값을 Link의 to 주소값으로 사용 */
                 fruits.map( (f, i) => (
