@@ -1,6 +1,5 @@
 import './App.css';
 // Router를 가져오기 위해 router;dom에서 컴포넌트를 가져옴
-import { Routes, Route } from 'react-router-dom';
 // 각각의 페이지 하나에 주소지에 보일 컴포넌트
 import Home from './page/Home';
 import About from './page/About';
