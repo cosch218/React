@@ -3,6 +3,9 @@ import { useState } from 'react';
 
 const DataContext = React.createContext("");
 
+// 컴포넌트 밖에서 생성한 값의 경우 자동으로 값이 바뀌지 않기에 안에서 메소드를 작성 후 전달(전역변수)
+let cId = 3;
+
 // 데이터 값을 가진 Provider 컴포넌트 작성
 // DataContext에 들어갈 value 값의 특징 : 2개 이상의 페이지 컴포넌트에서 사용할 때 작성
 // 페이지 컴포넌트 : path로 연결된 컴포넌트
@@ -43,10 +46,36 @@ const DataProvider = ({children}) => {
     }
   );
 
+  // commentlist 값 저장
+  // cid, boardId, writer, text, date
+  const [commentlist, setCommentlist] = useState(
+    [
+      {
+        cId: 1,
+        boardId: 1,
+        writer: "peach",
+        text: "첫번째 게시글의 코멘트입니다",
+        date: "2023-04-19"
+      },
+      {
+        cId: 2,
+        boardId: 3,
+        writer: "peach",
+        text: "세번째 게시글의 코멘트입니다",
+        date: "2023-04-19"
+      }
+    ]
+  );
+
+  // cId를 사용하기 위한 메소드 (호출하면 1씩 증가)
+  const cIdCount = () => {
+    cId++;
+  }
+
   // value에 담을 데이터 정리
   const value = {
-    state: {boardlist, id, user},
-    action: {setBoardlist, setId, setUser}
+    state: {boardlist, id, user, commentlist, cId},
+    action: {setBoardlist, setId, setUser, setCommentlist, cIdCount}
   }
 
   return <DataContext.Provider value={value}>
