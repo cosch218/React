@@ -14,6 +14,7 @@ export default function NavHeader() {
         <Link to="/">HOME</Link>
         <Link to="/boardlist">BOARDLIST</Link>
         <Link to="/board-write-form">WRITE</Link>
+        <Link to="/image">IMAGE</Link>
         {/** state.user.login이
         * true일 때 : state.user.writer 출력 
          * false일 때 : 링크 출력 */}
@@ -23,7 +24,7 @@ export default function NavHeader() {
          */}
         {
           state.user.login
-          ? <span>{state.user.writer}</span> 
+          ? <Link to='/mypage'>{state.user.writer}님의 페이지</Link> 
           : <Link to="/login-form">LOGIN</Link>
         }
     </div>

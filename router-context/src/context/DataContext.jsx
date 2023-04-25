@@ -39,10 +39,12 @@ const DataProvider = ({children}) => {
   const [id, setId] = useState(4);
 
   // user값을 사용하기 위해 useState() 작성
+  // 마이페이지 작성을 위해 임의로 값을 넣고 마이페이지 완성 후 다시 writer: "익명", login: false 로 수정
   const [user, setUser] = useState(
     {
-      writer: "익명",
-      login: false
+      writer: "green",
+      login: true,
+      profile: require('../img/profile.jpg')
     }
   );
 
@@ -67,6 +69,18 @@ const DataProvider = ({children}) => {
     ]
   );
 
+  // 좋아요 배열을 사용하기 위한 useState() >> 보통 user와 연결해서 사용. 지급은 연결하지 않고 진행
+  // 먼저 좋아요 표시를 BoardList에서 먼저 표시
+  // 그 후 게시글 안에서 표시
+  const [likelist, setLikelist] = useState(
+    [
+      {
+        boardId: 1,
+        title:"첫번째 게시물입니다"
+      }
+    ]
+  );
+
   // cId를 사용하기 위한 메소드 (호출하면 1씩 증가)
   const cIdCount = () => {
     cId++;
@@ -74,8 +88,8 @@ const DataProvider = ({children}) => {
 
   // value에 담을 데이터 정리
   const value = {
-    state: {boardlist, id, user, commentlist, cId},
-    action: {setBoardlist, setId, setUser, setCommentlist, cIdCount}
+    state: {boardlist, id, user, commentlist, cId, likelist},
+    action: {setBoardlist, setId, setUser, setCommentlist, cIdCount, setLikelist}
   }
 
   return <DataContext.Provider value={value}>

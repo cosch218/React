@@ -11,6 +11,8 @@ import { DataProvider } from './context/DataContext';
 import BoardWriteForm from './page/BoardWriteForm';
 import BoardEditForm from './page/BoardEditForm';
 import LoginForm from './page/LoginForm';
+import ImagePage from './page/ImagePage';
+import MyPage from './page/MyPage';
 
 
 function App() {
@@ -28,6 +30,9 @@ function App() {
             <Route path='/board-edit-form' element={<BoardEditForm/>}/>
 
             <Route path='/login-form' element={<LoginForm/>}/>
+            <Route path='/mypage' element={<MyPage/>}/>
+            
+            <Route path='/image' element={<ImagePage/>}/>
           </Route>
         </Routes>
       </DataProvider>
