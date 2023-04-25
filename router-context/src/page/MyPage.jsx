@@ -15,6 +15,8 @@ export default function MyPage() {
   // React는 가상 돔이기 때문에 render 이후에 return의 태그들이 화면에 출력
   const prePic = useRef();
 
+
+
   // 좋아요 삭제 메소드
   // 1. 삭제할 id를 찾는다
   const deleteLike = (id) => {
@@ -30,6 +32,8 @@ export default function MyPage() {
     // 1. 사진을 선택하는 창 출력 >> input type="file"
     // 2. 그 사진을 선택하면 프로필 사진이 바뀜 >> set메소드를 이용하여 user.profile 값 수정
   }
+
+
 
   // input:file 안에 있는 file 값을 가져오는 메소드
   // 1. input 태그 안에 있는 값을 가져오기 위해 e(이벤트 객체) 사용
@@ -65,6 +69,7 @@ export default function MyPage() {
     prePic.current.style.backgroundImage = `url(${URL.createObjectURL(e.target.files[0])})`
   }
 
+  
 
   return (
     <div>
