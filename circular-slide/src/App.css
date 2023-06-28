@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+body {
+  overscroll-behavior: none;
+}
+.wrapper {
+  padding: 50px;
+  padding: 50px;
+  min-height: 100vh;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper h3 {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+.circle {
+  border-radius: 50%;
+  position: relative;
+  border: 5px solid #575757;
+  touch-action: none;
+}
+.satellite {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f95e5e;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
